@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +23,7 @@
         .navbar {
             background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand img {
@@ -42,6 +43,39 @@
         }
 
         /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 50, 40, 0.55);
+            /* dark teal tint */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
         .hero {
             background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
             color: white;
@@ -122,13 +156,13 @@
             padding: 30px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
         }
 
         .stat-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .stat-number {
@@ -152,7 +186,7 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .owner-image {
@@ -193,14 +227,14 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
             height: 100%;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
 
         .project-image {
@@ -274,7 +308,7 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             text-align: center;
             line-height: 40px;
@@ -288,12 +322,14 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="data:image/svg+xml,<svg width='200' height='50' xmlns='http://www.w3.org/2000/svg'><text x='10' y='35' font-family='Arial' font-size='30' font-weight='bold' fill='white'>ASC</text><text x='90' y='35' font-family='Arial' font-size='20' fill='%23FF8C42'>Associates</text></svg>" alt="ASC Associates">
+                <img src="data:image/svg+xml,<svg width='200' height='50' xmlns='http://www.w3.org/2000/svg'><text x='10' y='35' font-family='Arial' font-size='30' font-weight='bold' fill='white'>ASC</text><text x='90' y='35' font-family='Arial' font-size='20' fill='%23FF8C42'>Associates</text></svg>"
+                    alt="ASC Associates">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -311,7 +347,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- <section id="home" class="hero">
         <div class="container hero-content">
             <div class="row align-items-center">
                 <div class="col-lg-7">
@@ -321,7 +357,29 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section id="home" class="hero position-relative">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="./construction.mp4" type="video/mp4">
+        </video>
+
+        <!-- Overlay (for readability) -->
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Building Tomorrow's Infrastructure Today</h1>
+                    <p>Expert civil engineering solutions for complex projects with precision, innovation, and
+                        excellence.</p>
+                    <button class="btn btn-primary-custom">Get Started</button>
+                </div>
+            </div>
+        </div>
     </section>
+
 
     <!-- Experience Section -->
     <section id="about" class="experience-section">
@@ -371,42 +429,48 @@
                     <div class="stat-card text-start">
                         <i class="fas fa-building fa-3x mb-3" style="color: var(--primary-orange);"></i>
                         <h4 style="color: var(--dark-teal);">Structural Design</h4>
-                        <p>Advanced structural engineering and design services for residential, commercial, and industrial projects.</p>
+                        <p>Advanced structural engineering and design services for residential, commercial, and
+                            industrial projects.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="stat-card text-start">
                         <i class="fas fa-road fa-3x mb-3" style="color: var(--primary-orange);"></i>
                         <h4 style="color: var(--dark-teal);">Infrastructure Development</h4>
-                        <p>Comprehensive infrastructure planning, roads, bridges, and transportation network development.</p>
+                        <p>Comprehensive infrastructure planning, roads, bridges, and transportation network
+                            development.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="stat-card text-start">
                         <i class="fas fa-water fa-3x mb-3" style="color: var(--primary-orange);"></i>
                         <h4 style="color: var(--dark-teal);">Water Resources</h4>
-                        <p>Expert water management systems, drainage solutions, and environmental engineering services.</p>
+                        <p>Expert water management systems, drainage solutions, and environmental engineering services.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="stat-card text-start">
                         <i class="fas fa-hard-hat fa-3x mb-3" style="color: var(--primary-orange);"></i>
                         <h4 style="color: var(--dark-teal);">Construction Management</h4>
-                        <p>Professional project management ensuring timely delivery and quality control throughout construction.</p>
+                        <p>Professional project management ensuring timely delivery and quality control throughout
+                            construction.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="stat-card text-start">
                         <i class="fas fa-mountain fa-3x mb-3" style="color: var(--primary-orange);"></i>
                         <h4 style="color: var(--dark-teal);">Geotechnical Engineering</h4>
-                        <p>Soil investigation, foundation design, and ground improvement solutions for stable structures.</p>
+                        <p>Soil investigation, foundation design, and ground improvement solutions for stable
+                            structures.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="stat-card text-start">
                         <i class="fas fa-chart-line fa-3x mb-3" style="color: var(--primary-orange);"></i>
                         <h4 style="color: var(--dark-teal);">Consulting Services</h4>
-                        <p>Expert consultation for feasibility studies, cost estimation, and project optimization strategies.</p>
+                        <p>Expert consultation for feasibility studies, cost estimation, and project optimization
+                            strategies.</p>
                     </div>
                 </div>
             </div>
@@ -430,9 +494,15 @@
                         <div class="owner-info">
                             <h3 class="owner-name">Eng. Rajesh Kumar</h3>
                             <p class="owner-title">Founder & Chief Engineer</p>
-                            <p class="mb-3">With over 25 years of experience in civil engineering, Eng. Rajesh Kumar has led ASC Associates to become one of the most trusted names in the industry. His vision and dedication to excellence have resulted in hundreds of successful projects across the region.</p>
-                            <p class="mb-3">A graduate of IIT Delhi with a Master's in Structural Engineering, he brings a wealth of knowledge and innovation to every project. His leadership has earned numerous industry awards and recognition.</p>
-                            <p><strong>Specializations:</strong> Structural Design, Project Management, Sustainable Engineering</p>
+                            <p class="mb-3">With over 25 years of experience in civil engineering, Eng. Rajesh Kumar has
+                                led ASC Associates to become one of the most trusted names in the industry. His vision
+                                and dedication to excellence have resulted in hundreds of successful projects across the
+                                region.</p>
+                            <p class="mb-3">A graduate of IIT Delhi with a Master's in Structural Engineering, he brings
+                                a wealth of knowledge and innovation to every project. His leadership has earned
+                                numerous industry awards and recognition.</p>
+                            <p><strong>Specializations:</strong> Structural Design, Project Management, Sustainable
+                                Engineering</p>
                             <p><strong>Certifications:</strong> PE License, LEED AP, PMP</p>
                         </div>
                     </div>
@@ -456,7 +526,8 @@
                         </div>
                         <div class="project-body">
                             <h5 class="project-title">Metro Tower Complex</h5>
-                            <p>40-story commercial tower with advanced structural systems and sustainable design features.</p>
+                            <p>40-story commercial tower with advanced structural systems and sustainable design
+                                features.</p>
                             <span class="badge" style="background-color: var(--primary-orange);">Commercial</span>
                         </div>
                     </div>
@@ -468,7 +539,8 @@
                         </div>
                         <div class="project-body">
                             <h5 class="project-title">City Highway Bridge</h5>
-                            <p>2.5 km cable-stayed bridge connecting major city districts with innovative engineering solutions.</p>
+                            <p>2.5 km cable-stayed bridge connecting major city districts with innovative engineering
+                                solutions.</p>
                             <span class="badge" style="background-color: var(--primary-orange);">Infrastructure</span>
                         </div>
                     </div>
@@ -480,7 +552,8 @@
                         </div>
                         <div class="project-body">
                             <h5 class="project-title">Central Hospital</h5>
-                            <p>500-bed multi-specialty hospital with state-of-the-art infrastructure and safety systems.</p>
+                            <p>500-bed multi-specialty hospital with state-of-the-art infrastructure and safety systems.
+                            </p>
                             <span class="badge" style="background-color: var(--primary-orange);">Healthcare</span>
                         </div>
                     </div>
@@ -492,7 +565,8 @@
                         </div>
                         <div class="project-body">
                             <h5 class="project-title">Industrial Park Development</h5>
-                            <p>200-acre industrial complex with comprehensive infrastructure and utility management systems.</p>
+                            <p>200-acre industrial complex with comprehensive infrastructure and utility management
+                                systems.</p>
                             <span class="badge" style="background-color: var(--primary-orange);">Industrial</span>
                         </div>
                     </div>
@@ -504,7 +578,8 @@
                         </div>
                         <div class="project-body">
                             <h5 class="project-title">Green Valley Residences</h5>
-                            <p>Eco-friendly residential township with 1000+ units featuring sustainable design principles.</p>
+                            <p>Eco-friendly residential township with 1000+ units featuring sustainable design
+                                principles.</p>
                             <span class="badge" style="background-color: var(--primary-orange);">Residential</span>
                         </div>
                     </div>
@@ -516,7 +591,8 @@
                         </div>
                         <div class="project-body">
                             <h5 class="project-title">Water Treatment Plant</h5>
-                            <p>Advanced water treatment facility serving 500,000 residents with modern purification technology.</p>
+                            <p>Advanced water treatment facility serving 500,000 residents with modern purification
+                                technology.</p>
                             <span class="badge" style="background-color: var(--primary-orange);">Utilities</span>
                         </div>
                     </div>
@@ -571,7 +647,8 @@
                                     <input type="text" class="form-control" placeholder="Subject">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                    <textarea class="form-control" rows="5" placeholder="Your Message"
+                                        required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary-custom">Send Message</button>
@@ -590,7 +667,8 @@
             <div class="row g-4">
                 <div class="col-lg-4">
                     <h5>ASC Associates</h5>
-                    <p>Leading civil engineering firm delivering innovative solutions with excellence and integrity since 1998.</p>
+                    <p>Leading civil engineering firm delivering innovative solutions with excellence and integrity
+                        since 1998.</p>
                     <div class="social-links mt-3">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -649,7 +727,7 @@
         });
 
         // Navbar background on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
                 navbar.style.padding = '0.5rem 0';
@@ -659,4 +737,5 @@
         });
     </script>
 </body>
+
 </html>
