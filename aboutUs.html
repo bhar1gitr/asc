@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css">
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
             background: #eef2f1;
@@ -38,7 +38,7 @@
             line-height: 1.7;
         }
     </style>
-    
+
 </head>
 
 <body>
@@ -64,13 +64,29 @@
         </div>
     </nav>
     <!-- Hero Section -->
-    <section class="hero">
+    <!-- <section class="hero">
         <div class="container">
             <img src="/mnt/data/907c4b67-c788-4b28-a91e-1b092410de86.png" height="130" class="mb-3" />
             <h1 class="fw-bold" data-aos="fade-down">Associated Consultants</h1>
             <p class="lead" data-aos="fade-up">40+ Years of Structural Engineering Excellence</p>
         </div>
+    </section> -->
+
+    <section class="hero position-relative">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="./construction.mp4" type="video/mp4">
+        </video>
+
+        <!-- Overlay (for readability) -->
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <h1 class="fw-bold" data-aos="fade-down">Associated Consultants</h1>
+            <p class="lead" data-aos="fade-up">40+ Years of Structural Engineering Excellence</p>
+        </div>
     </section>
+
 
     <!-- About Section -->
     <section class="py-5 about-section">

@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - ASC Associates</title>
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <style>
-    body {
-      background: #eef2f1;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .hero {
-      background: linear-gradient(rgba(46, 79, 70, 0.7), rgba(46, 79, 70, 0.7)), 
-                  url('https://images.unsplash.com/photo-1581091012184-5c7b8c4a1e50') center/cover;
-      padding: 120px 0;
-      color: white;
-      text-align: center;
-    }
-    .stat-box {
-      transition: 0.3s;
-      border-top: 6px solid #f28c28;
-    }
-    .stat-box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-    .about-section p {
-      font-size: 1.07rem;
-      line-height: 1.7;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - ASC Associates</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #eef2f1;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(46, 79, 70, 0.7), rgba(46, 79, 70, 0.7)),
+                url('https://images.unsplash.com/photo-1581091012184-5c7b8c4a1e50') center/cover;
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .stat-box {
+            transition: 0.3s;
+            border-top: 6px solid #f28c28;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section p {
+            font-size: 1.07rem;
+            line-height: 1.7;
+        }
+    </style>
 </head>
+
 <body>
-      <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
@@ -56,116 +62,124 @@
             </div>
         </div>
     </nav>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <img src="/mnt/data/907c4b67-c788-4b28-a91e-1b092410de86.png" height="130" class="mb-3" />
-      <h1 class="fw-bold" data-aos="fade-down">Associated Consultants</h1>
-      <p class="lead" data-aos="fade-up">40+ Years of Structural Engineering Excellence</p>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero position-relative">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="./construction.mp4" type="video/mp4">
+        </video>
 
-  <!-- Services Section -->
-  <section class="py-5" style="background:#f7f9f8;">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold" style="color:#2e4f46;" data-aos="fade-up">Our Services</h2>
-        <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Comprehensive engineering solutions backed by 40+ years of expertise</p>
-      </div>
+        <!-- Overlay (for readability) -->
+        <div class="hero-overlay"></div>
 
-      <div class="row g-4">
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1544/1544005.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Structural Engineering</h5>
-          </div>
+        <div class="container hero-content">
+            <h1 class="fw-bold" data-aos="fade-down">Associated Consultants</h1>
+            <p class="lead" data-aos="fade-up">40+ Years of Structural Engineering Excellence</p>
         </div>
+    </section>
 
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/3990/3990113.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Project Management Consultancy (PMC)</h5>
-          </div>
+    <!-- Services Section -->
+    <section class="py-5" style="background:#f7f9f8;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" style="color:#2e4f46;" data-aos="fade-up">Our Services</h2>
+                <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Comprehensive engineering solutions backed
+                    by 40+ years of expertise</p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1544/1544005.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Structural Engineering</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3990/3990113.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Project Management Consultancy (PMC)</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1543/1543892.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Township Planning</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1317/1317486.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Civil Engineering</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1623/1623999.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Infrastructure Engineering</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="350">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1623/1623992.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Construction Engineering</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1078/1078596.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Environmental Engineering</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="450">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1518/1518604.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Statutory Documentation</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/103/103511.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Reinforcement Detailing & Drawings</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="550">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1467/1467105.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Water Management</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1556/1556324.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Quantity Surveying</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="650">
+                    <div class="p-4 bg-white shadow-sm rounded text-center h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1105/1105401.png" height="70" class="mb-3" />
+                        <h5 class="fw-bold">Geotechnical Engineering</h5>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1543/1543892.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Township Planning</h5>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="250">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1317/1317486.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Civil Engineering</h5>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1623/1623999.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Infrastructure Engineering</h5>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="350">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1623/1623992.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Construction Engineering</h5>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1078/1078596.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Environmental Engineering</h5>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="450">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1518/1518604.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Statutory Documentation</h5>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/103/103511.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Reinforcement Detailing & Drawings</h5>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="550">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1467/1467105.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Water Management</h5>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1556/1556324.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Quantity Surveying</h5>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="650">
-          <div class="p-4 bg-white shadow-sm rounded text-center h-100">
-            <img src="https://cdn-icons-png.flaticon.com/512/1105/1105401.png" height="70" class="mb-3" />
-            <h5 class="fw-bold">Geotechnical Engineering</h5>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+    </section>
 
 
 
-      <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
@@ -214,9 +228,10 @@
         </div>
     </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
