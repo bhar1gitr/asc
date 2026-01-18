@@ -7,8 +7,8 @@
     <title>About Us - ASC Associates</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <style>
         body {
             background: #eef2f1;
@@ -16,6 +16,7 @@
         }
 
         .hero {
+            /* Fallback background if video doesn't load */
             background: linear-gradient(rgba(46, 79, 70, 0.7), rgba(46, 79, 70, 0.7)),
                 url('https://images.unsplash.com/photo-1581091012184-5c7b8c4a1e50') center/cover;
             padding: 120px 0;
@@ -23,9 +24,34 @@
             text-align: center;
         }
 
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(46, 79, 70, 0.75);
+            z-index: -1;
+        }
+
         .stat-box {
             transition: 0.3s;
             border-top: 6px solid #f28c28;
+            height: 100%;
+            /* Ensure equal height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .stat-box:hover {
@@ -35,15 +61,53 @@
 
         .about-section p {
             font-size: 1.07rem;
-            line-height: 1.7;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .quote-box {
+            border-left: 5px solid #f28c28;
+            background: #fff;
+            padding: 20px;
+            font-style: italic;
+            margin-top: 30px;
+        }
+
+        /* Custom button style from footer */
+        .btn-primary-custom {
+            background-color: #f28c28;
+            color: white;
+            border: none;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #d97a1f;
+            color: white;
+        }
+
+        .footer {
+            background-color: #2e4f46;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer a:hover {
+            color: #f28c28;
+            padding-left: 5px;
         }
     </style>
 
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(46, 79, 70, 0.95);">
         <div class="container">
             <a class="navbar-brand" href="#home">
                 <img src="data:image/svg+xml,<svg width='200' height='50' xmlns='http://www.w3.org/2000/svg'><text x='10' y='35' font-family='Arial' font-size='30' font-weight='bold' fill='white'>ASC</text><text x='90' y='35' font-family='Arial' font-size='20' fill='%23FF8C42'>Associates</text></svg>"
@@ -54,139 +118,161 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutUs.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./clients.html">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./lifeAtAsc.html">Life at ASC</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Hero Section -->
-    <!-- <section class="hero">
-        <div class="container">
-            <img src="/mnt/data/907c4b67-c788-4b28-a91e-1b092410de86.png" height="130" class="mb-3" />
-            <h1 class="fw-bold" data-aos="fade-down">Associated Consultants</h1>
-            <p class="lead" data-aos="fade-up">40+ Years of Structural Engineering Excellence</p>
-        </div>
-    </section> -->
 
     <section class="hero position-relative">
-        <!-- Background Video -->
         <video autoplay muted loop playsinline class="hero-video">
             <source src="./construction.mp4" type="video/mp4">
         </video>
 
-        <!-- Overlay (for readability) -->
         <div class="hero-overlay"></div>
 
         <div class="container hero-content">
-            <h1 class="fw-bold" data-aos="fade-down">Associated Consultants</h1>
-            <p class="lead" data-aos="fade-up">40+ Years of Structural Engineering Excellence</p>
+            <h1 class="fw-bold display-4" data-aos="fade-down">Associated Consultants</h1>
+            <p class="lead fs-3" data-aos="fade-up">40+ Years of Structural Engineering Excellence</p>
         </div>
     </section>
 
 
-    <!-- About Section -->
     <section class="py-5 about-section">
         <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold" style="color:#2e4f46;" data-aos="fade-up">About Us</h2>
+            <div class="text-center mb-5">
+                <h5 class="text-uppercase" style="color: #f28c28; letter-spacing: 2px;">Who We Are</h5>
+                <h2 class="fw-bold display-5" style="color:#2e4f46;" data-aos="fade-up">About Associated Consultants
+                </h2>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
+
                     <p data-aos="fade-up" data-aos-delay="100">
-                        Established in 1983 by <strong>Mr. Vikas Gokhale</strong>,
-                        <strong>Associated Consultants</strong> has evolved into one of India’s most trusted
-                        and respected structural consultancy firms.
+                        Associated Consultants is a leading structural consultancy firm started by <strong>Mr. Vikas
+                            Gokhale in 1983</strong>.
+                        With more than <strong>40 years of experience</strong> in the construction industry, we have
+                        grown into a national
+                        multi-disciplinary organization. We have successfully completed more than <strong>3500+
+                            jobs</strong> including
+                        residential, commercial, multiplexes, and industrial buildings with reputed Builders and
+                        Architects.
                     </p>
 
                     <p data-aos="fade-up" data-aos-delay="200">
-                        With over <strong>3500+ successfully completed projects</strong> — from bungalows, townships,
-                        commercial complexes, multiplexes, and industrial setups — we deliver end-to-end structural
-                        design and detailing services tailored to every project's unique requirements.
+                        We primarily focus on all structural design solutions and building design services, including
+                        concrete and
+                        steel detailing services for all types of high-rise and low-rise residential and commercial
+                        buildings.
+                        We are well known for perfection and provide economic and efficient solutions which are safe and
+                        conform
+                        to accepted standards.
                     </p>
 
                     <p data-aos="fade-up" data-aos-delay="300">
-                        Our team consists of highly experienced engineers proficient in global design codes and
-                        international standards. Through a combination of innovation, precision, and modern
-                        engineering tools, we ensure structural designs that are safe, cost-efficient, and future-ready.
+                        Our highly skilled team comprises professional structural engineers and designers, familiar with
+                        international
+                        steel and concrete design and detailing standards and codes. Due to the versatility of our
+                        engineering teams,
+                        we are able to offer a wide range of services. Our team tailors client-specific solutions, using
+                        cutting-edge
+                        technology and innovative methods which can lead to cost and programme savings for our clients.
                     </p>
 
                     <p data-aos="fade-up" data-aos-delay="400">
-                        At Associated Consultants, <strong>client satisfaction is our core strength</strong>. We deliver
-                        solutions that balance safety, aesthetics, and functionality, ensuring long-term value for
-                        every project.
+                        Our strength is our <strong>Client satisfaction</strong>. We strive to exceed client
+                        requirements by providing
+                        them with unique and valued solutions. We utilize our experience and awareness of market design
+                        trends to
+                        encourage extremely effective designs and provide guidance and foresight to our clients.
                     </p>
+
+                    <div class="quote-box rounded shadow-sm" data-aos="zoom-in" data-aos-delay="500">
+                        <p class="mb-0 fw-bold" style="color:#2e4f46;">
+                            "Associated Consultants is an answer for all structural engineering & design demands.
+                            We have the capability of handling all types of projects, be it a dream Bungalow or huge
+                            township Projects;
+                            our services are always provided in a timely fashion with unpatrolled solutions. We take an
+                            enthusiastic
+                            initiative in all of our projects & strive for nothing less than excellence."
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Stats Section -->
-            <div class="row text-center mt-5">
-                <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row text-center mt-5 g-4">
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
                     <div class="p-4 rounded shadow-sm bg-white stat-box">
                         <h3 class="fw-bold" style="color:#2e4f46;">40+</h3>
-                        <p class="mb-0">Years of Excellence</p>
+                        <p class="mb-0 fw-semibold text-secondary">Years of Experience</p>
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
                     <div class="p-4 rounded shadow-sm bg-white stat-box">
                         <h3 class="fw-bold" style="color:#2e4f46;">3500+</h3>
-                        <p class="mb-0">Projects Completed</p>
+                        <p class="mb-0 fw-semibold text-secondary">Projects Delivered</p>
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
                     <div class="p-4 rounded shadow-sm bg-white stat-box">
                         <h3 class="fw-bold" style="color:#2e4f46;">25+</h3>
-                        <p class="mb-0">Expert Engineers</p>
+                        <p class="mb-0 fw-semibold text-secondary">Team Members</p>
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
                     <div class="p-4 rounded shadow-sm bg-white stat-box">
-                        <h3 class="fw-bold" style="color:#2e4f46;">Pan-India</h3>
-                        <p class="mb-0">& Global Reach</p>
+                        <h3 class="fw-bold" style="color:#2e4f46;">Global</h3>
+                        <p class="mb-0 fw-semibold text-secondary">Pan-India & Int'l Reach</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="text-center mt-4 text-muted" data-aos="fade-in">
+                <small><i class="fas fa-building me-2"></i>Operating from 2000 sq. ft. Office Space</small>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
                     <h5>ASC Associates</h5>
-                    <p>Leading civil engineering firm delivering innovative solutions with excellence and integrity
-                        since 1998.</p>
+                    <p>Leading structural consultancy firm started by Mr. Vikas Gokhale. Delivering innovative solutions
+                        with excellence and integrity since 1983.</p>
                     <div class="social-links mt-3">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="#home">Home</a></li>
+                        <li class="mb-2"><a href="#about">About Us</a></li>
+                        <li class="mb-2"><a href="#services">Services</a></li>
+                        <li class="mb-2"><a href="#projects">Projects</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h5>Services</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Structural Design</a></li>
-                        <li><a href="#">Infrastructure</a></li>
-                        <li><a href="#">Water Resources</a></li>
-                        <li><a href="#">Consulting</a></li>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="#">Structural Design</a></li>
+                        <li class="mb-2"><a href="#">Detailing Services</a></li>
+                        <li class="mb-2"><a href="#">Industrial Buildings</a></li>
+                        <li class="mb-2"><a href="#">Consulting</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -206,8 +292,12 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
     </script>
 </body>
 

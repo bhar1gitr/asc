@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Clients | ASC Associates</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --brand-green: #294a40; 
+            --brand-orange: #f39c12; 
+            --light-bg: #f4f7f6;     
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background-color: var(--brand-green);
+            padding: 15px 0;
+        }
+        .navbar-brand {
+            font-weight: 900;
+            color: white !important;
+            font-size: 1.5rem;
+        }
+        .navbar-brand span {
+            color: var(--brand-orange);
+            font-weight: 400;
+        }
+        .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            margin: 0 10px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: white !important;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            background: linear-gradient(rgba(41, 74, 64, 0.9), rgba(41, 74, 64, 0.8)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .section-subtitle {
+            color: var(--brand-orange);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* --- CLIENT CARDS --- */
+        .client-category-card {
+            background: white;
+            border: none;
+            border-top: 5px solid var(--brand-orange); /* Theme Signature */
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        .category-title {
+            color: var(--brand-green);
+            font-weight: 700;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .client-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .client-list li {
+            padding: 8px 0;
+            font-size: 1rem;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+        .client-list li i {
+            color: var(--brand-orange);
+            margin-right: 12px;
+            font-size: 0.8rem;
+        }
+
+        /* --- STATS BAR --- */
+        .stats-bar {
+            background-color: var(--brand-green);
+            color: white;
+            padding: 40px 0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #223a32; /* Slightly darker green */
+            color: white;
+            padding: 60px 0 30px 0;
+            font-size: 0.9rem;
+        }
+        footer h5 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .btn-subscribe {
+            background-color: var(--brand-orange);
+            color: white;
+            border: none;
+        }
+        .btn-subscribe:hover {
+            background-color: #d35400;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(46, 79, 70, 0.95);">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="data:image/svg+xml,<svg width='200' height='50' xmlns='http://www.w3.org/2000/svg'><text x='10' y='35' font-family='Arial' font-size='30' font-weight='bold' fill='white'>ASC</text><text x='90' y='35' font-family='Arial' font-size='20' fill='%23FF8C42'>Associates</text></svg>"
+                    alt="ASC Associates">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./clients.html">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./lifeAtAsc.html">Life at ASC</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Our Valued Clients</h1>
+            <p class="lead">Building trust with industry leaders since 1983.</p>
+        </div>
+    </header>
+
+    <section class="py-5 text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <span class="section-subtitle">A Legacy of Trust</span>
+                    <h2 class="fw-bold mb-4" style="color: var(--brand-green);">Partnering with the Best</h2>
+                    <p class="text-muted">
+                        From multinational corporations to India's leading real estate developers, 
+                        ASC Associates has successfully delivered over <strong>3500+ projects</strong>. 
+                        Our client relationships are built on a foundation of structural integrity and timely delivery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="client-category-card">
+                        <div class="text-center mb-3">
+                            <i class="fa-solid fa-industry fa-2x" style="color: var(--brand-green);"></i>
+                        </div>
+                        <h4 class="category-title text-center">Corporate & Industrial</h4>
+                        <ul class="client-list">
+                            <li><i class="fa-solid fa-circle"></i> Johnson & Johnson</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Bharat Bijlee Ltd [cite: 929]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Macleods Pharmaceuticals [cite: 932]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Haldiram's Foods [cite: 1311]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> AGS Transact [cite: 1311]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Classic Marble [cite: 836]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Liberty Oil Mill [cite: 930]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Smith & Nephew [cite: 933]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Leela Group of Hotels [cite: 1308]</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="client-category-card">
+                        <div class="text-center mb-3">
+                            <i class="fa-solid fa-city fa-2x" style="color: var(--brand-green);"></i>
+                        </div>
+                        <h4 class="category-title text-center">Real Estate Developers</h4>
+                        <ul class="client-list">
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> RNA Corp [cite: 1308]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Paranjape Schemes [cite: 1283]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Haware Builders [cite: 1311]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Goodwill Developers [cite: 1311]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Kamdhenu Builders [cite: 1304]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Concrete Builders [cite: 750]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Gajra Home Makers [cite: 762]</li>
+                            <li><i class="fa-solid fa-circle"></i> Hiranandani (Consultant Combined)</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Aditya Group [cite: 1291]</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="client-category-card">
+                        <div class="text-center mb-3">
+                            <i class="fa-solid fa-landmark fa-2x" style="color: var(--brand-green);"></i>
+                        </div>
+                        <h4 class="category-title text-center">Institutional & Others</h4>
+                        <ul class="client-list">
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Police Housing Board (MSPHWC) [cite: 786]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Bethany Trust Cancer Hospital [cite: 843]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Little Wonders English School [cite: 916]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Parshwanath College [cite: 819]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Sai-Maahavir Developers [cite: 770]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Ishaan Dream Build [cite: 808]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Sambhav Group [cite: 1283]</li>
+                            [cite_start]<li><i class="fa-solid fa-circle"></i> Qualitas Lifespaces [cite: 1304]</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h2 class="fw-bold">40+</h2>
+                    <p class="mb-0 text-white-50">Years of Experience</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h2 class="fw-bold">3500+</h2>
+                    <p class="mb-0 text-white-50">Projects Completed</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="fw-bold">100%</h2>
+                    <p class="mb-0 text-white-50">Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold text-white">ASC Associates</h5>
+                    <p class="small text-white-50">Delivering innovative structural solutions with excellence and integrity since 1983.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="services.html" class="text-white-50 text-decoration-none">Services</a></li>
+                        <li><a href="projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <p class="small text-white-50">
+                        A-801, Sai Tirth, Kopri,<br>
+                        Thane (E), 400603<br>
+                        Tel: (022) 25327742<br>
+                        Email: info@asc.org.in
+                    </p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Newsletter</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-sm" placeholder="Email">
+                        <button class="btn btn-subscribe btn-sm" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center small text-white-50">
+                &copy; 2025 ASC Associates. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
