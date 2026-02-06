@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Clients | ASC Associates</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
@@ -12,9 +13,9 @@
 
     <style>
         :root {
-            --brand-green: #294a40; 
-            --brand-orange: #f39c12; 
-            --light-bg: #f4f7f6;     
+            --brand-green: #294a40;
+            --brand-orange: #f39c12;
+            --light-bg: #f4f7f6;
             --text-dark: #333333;
         }
 
@@ -29,22 +30,27 @@
             background-color: var(--brand-green);
             padding: 15px 0;
         }
+
         .navbar-brand {
             font-weight: 900;
             color: white !important;
             font-size: 1.5rem;
         }
+
         .navbar-brand span {
             color: var(--brand-orange);
             font-weight: 400;
         }
+
         .nav-link {
-            color: rgba(255,255,255,0.8) !important;
+            color: rgba(255, 255, 255, 0.8) !important;
             margin: 0 10px;
             font-size: 0.95rem;
             transition: color 0.3s;
         }
-        .nav-link:hover, .nav-link.active {
+
+        .nav-link:hover,
+        .nav-link.active {
             color: white !important;
         }
 
@@ -60,6 +66,7 @@
             color: white;
             text-align: center;
         }
+
         .section-subtitle {
             color: var(--brand-orange);
             font-weight: 700;
@@ -73,11 +80,13 @@
         .client-category-card {
             background: white;
             border: none;
-            border-top: 5px solid var(--brand-orange); /* Theme Signature */
+            border-top: 5px solid var(--brand-orange);
+            /* Theme Signature */
             padding: 40px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             height: 100%;
         }
+
         .category-title {
             color: var(--brand-green);
             font-weight: 700;
@@ -85,11 +94,13 @@
             border-bottom: 1px solid #eee;
             padding-bottom: 15px;
         }
+
         .client-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+
         .client-list li {
             padding: 8px 0;
             font-size: 1rem;
@@ -97,6 +108,7 @@
             display: flex;
             align-items: center;
         }
+
         .client-list li i {
             color: var(--brand-orange);
             margin-right: 12px;
@@ -112,33 +124,38 @@
 
         /* --- FOOTER --- */
         footer {
-            background-color: #223a32; /* Slightly darker green */
+            background-color: #223a32;
+            /* Slightly darker green */
             color: white;
             padding: 60px 0 30px 0;
             font-size: 0.9rem;
         }
+
         footer h5 {
             font-weight: 700;
             margin-bottom: 20px;
             color: white;
         }
+
         .btn-subscribe {
             background-color: var(--brand-orange);
             color: white;
             border: none;
         }
+
         .btn-subscribe:hover {
             background-color: #d35400;
             color: white;
         }
     </style>
 </head>
+
 <body>
 
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(46, 79, 70, 0.95);">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(46, 79, 70, 0.95);">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="data:image/svg+xml,<svg width='200' height='50' xmlns='http://www.w3.org/2000/svg'><text x='10' y='35' font-family='Arial' font-size='30' font-weight='bold' fill='white'>ASC</text><text x='90' y='35' font-family='Arial' font-size='20' fill='%23FF8C42'>Associates</text></svg>"
+                <img style="border-radius: 50%;" src="./images/logo.png"
                     alt="ASC Associates">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -172,8 +189,8 @@
                     <span class="section-subtitle">A Legacy of Trust</span>
                     <h2 class="fw-bold mb-4" style="color: var(--brand-green);">Partnering with the Best</h2>
                     <p class="text-muted">
-                        From multinational corporations to India's leading real estate developers, 
-                        ASC Associates has successfully delivered over <strong>3500+ projects</strong>. 
+                        From multinational corporations to India's leading real estate developers,
+                        ASC Associates has successfully delivered over <strong>3500+ projects</strong>.
                         Our client relationships are built on a foundation of structural integrity and timely delivery.
                     </p>
                 </div>
@@ -181,66 +198,241 @@
         </div>
     </section>
 
-    <section class="pb-5">
+    <section class="py-5" style="background-color: #f8f9fa;">
         <div class="container">
-            <div class="row g-4">
-                
-                <div class="col-md-6 col-lg-4">
-                    <div class="client-category-card">
-                        <div class="text-center mb-3">
-                            <i class="fa-solid fa-industry fa-2x" style="color: var(--brand-green);"></i>
-                        </div>
-                        <h4 class="category-title text-center">Corporate & Industrial</h4>
-                        <ul class="client-list">
-                            <li><i class="fa-solid fa-circle"></i> Johnson & Johnson</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Bharat Bijlee Ltd [cite: 929]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Macleods Pharmaceuticals [cite: 932]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Haldiram's Foods [cite: 1311]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> AGS Transact [cite: 1311]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Classic Marble [cite: 836]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Liberty Oil Mill [cite: 930]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Smith & Nephew [cite: 933]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Leela Group of Hotels [cite: 1308]</li>
-                        </ul>
+            <div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-5">
+
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/ashar.png" alt="">
+                        <div class="client-name">Ashar</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/kmdevelopers.png" alt="">
+                        <div class="client-name">KM Developers</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/bhagwati.png" alt="">
+                        <div class="client-name">Bhagwati</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/shree_krishna_group.png" alt="">
+                        <div class="client-name">Shree Krishna</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/laxmi.png" alt="">
+                        <div class="client-name">Laxmi</div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="client-category-card">
-                        <div class="text-center mb-3">
-                            <i class="fa-solid fa-city fa-2x" style="color: var(--brand-green);"></i>
-                        </div>
-                        <h4 class="category-title text-center">Real Estate Developers</h4>
-                        <ul class="client-list">
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> RNA Corp [cite: 1308]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Paranjape Schemes [cite: 1283]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Haware Builders [cite: 1311]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Goodwill Developers [cite: 1311]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Kamdhenu Builders [cite: 1304]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Concrete Builders [cite: 750]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Gajra Home Makers [cite: 762]</li>
-                            <li><i class="fa-solid fa-circle"></i> Hiranandani (Consultant Combined)</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Aditya Group [cite: 1291]</li>
-                        </ul>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/phoenix.png" alt="">
+                        <div class="client-name">Phoenix</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/metricon.png" alt="">
+                        <div class="client-name">Metricon</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/greenspace.png" alt="">
+                        <div class="client-name">Greenspace</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/adityaraj.png" alt="">
+                        <div class="client-name">Adityaraj</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/concrete_builders.jpg" alt="">
+                        <div class="client-name">Concrete Builders</div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="client-category-card">
-                        <div class="text-center mb-3">
-                            <i class="fa-solid fa-landmark fa-2x" style="color: var(--brand-green);"></i>
-                        </div>
-                        <h4 class="category-title text-center">Institutional & Others</h4>
-                        <ul class="client-list">
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Police Housing Board (MSPHWC) [cite: 786]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Bethany Trust Cancer Hospital [cite: 843]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Little Wonders English School [cite: 916]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Parshwanath College [cite: 819]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Sai-Maahavir Developers [cite: 770]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Ishaan Dream Build [cite: 808]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Sambhav Group [cite: 1283]</li>
-                            [cite_start]<li><i class="fa-solid fa-circle"></i> Qualitas Lifespaces [cite: 1304]</li>
-                        </ul>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/goodwill.webp" alt="">
+                        <div class="client-name">Goodwill</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/kamdhenu.png" alt="">
+                        <div class="client-name">Kamdhenu</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/neelsidhi.jpg" alt="">
+                        <div class="client-name">Neelsidhi</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/satyam.jpg" alt="">
+                        <div class="client-name">Satyam</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/akshar.png" alt="">
+                        <div class="client-name">Akshar</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/paranjape.png" alt="">
+                        <div class="client-name">Paranjape</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/starwing.png" alt="">
+                        <div class="client-name">Starwing</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/nova10.png" alt="">
+                        <div class="client-name">Nova 10</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/nandivardhan.png" alt="">
+                        <div class="client-name">Nandivardhan</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/the_wadhwa_group.png" alt="">
+                        <div class="client-name">Wadhwa Group</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/mellora.jpg" alt="">
+                        <div class="client-name">Mellora</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/tharwani.png" alt="">
+                        <div class="client-name">Tharwani</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/tricity.jpg" alt="">
+                        <div class="client-name">Tricity</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/amar_groups.png" alt="">
+                        <div class="client-name">Amar Groups</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/patel_rpl.png" alt="">
+                        <div class="client-name">Patel RPL</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/sayaji_realty.png" alt="">
+                        <div class="client-name">Sayaji Realty</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/ojass_govind_group.png" alt="">
+                        <div class="client-name">Ojass Govind</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/shrusti.png" alt="">
+                        <div class="client-name">Shrusti</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/metro_group.png" alt="">
+                        <div class="client-name">Metro Group</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/siddha.jpg" alt="">
+                        <div class="client-name">Siddha</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/arihant.png" alt="">
+                        <div class="client-name">Arihant</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/maatr_group.jpg" alt="">
+                        <div class="client-name">Maatr Group</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/jvm_spaces.jpg" alt="">
+                        <div class="client-name">JVM Spaces</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/kripa_elite.jpg" alt="">
+                        <div class="client-name">Kripa Elite</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/rutu.jpg" alt="">
+                        <div class="client-name">Rutu</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/kanakia.jpg" alt="">
+                        <div class="client-name">Kanakia</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/shree_naman.jpg" alt="">
+                        <div class="client-name">Shree Naman</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/swaminarayan_city.jpg" alt="">
+                        <div class="client-name">Swaminarayan</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/aayush.jpg" alt="">
+                        <div class="client-name">Aayush</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/neelyog.jpg" alt="">
+                        <div class="client-name">Neelyog</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/national_builders.jpg" alt="">
+                        <div class="client-name">National Builders</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/thapar.jpg" alt="">
+                        <div class="client-name">Thapar</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/experia.jpg" alt="">
+                        <div class="client-name">Experia</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/tirthraj.jpg" alt="">
+                        <div class="client-name">Tirthraj</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="client-card shadow-sm"><img src="images/seasons.png" alt="">
+                        <div class="client-name">Seasons</div>
                     </div>
                 </div>
 
@@ -248,20 +440,30 @@
         </div>
     </section>
 
-    <section class="stats-bar">
+    <section class="stats-bar py-5"
+        style="background-color: var(--brand-orange);">
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h2 class="fw-bold">40+</h2>
-                    <p class="mb-0 text-white-50">Years of Experience</p>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-black mb-0" style="color: var(--brand-green);">40+</h2>
+                        <p class="fw-bold text-uppercase small ls-2" style="color: #223a32; opacity: 0.8;">Years of
+                            Experience</p>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h2 class="fw-bold">3500+</h2>
-                    <p class="mb-0 text-white-50">Projects Completed</p>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-black mb-0" style="color: var(--brand-green);">3500+</h2>
+                        <p class="fw-bold text-uppercase small ls-2" style="color: #223a32; opacity: 0.8;">Projects
+                            Completed</p>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <h2 class="fw-bold">100%</h2>
-                    <p class="mb-0 text-white-50">Client Satisfaction</p>
+                    <div class="stat-item">
+                        <h2 class="display-4 fw-black mb-0" style="color: var(--brand-green);">100%</h2>
+                        <p class="fw-bold text-uppercase small ls-2" style="color: #223a32; opacity: 0.8;">Client
+                            Satisfaction</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -272,7 +474,8 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <h5 class="fw-bold text-white">ASC Associates</h5>
-                    <p class="small text-white-50">Delivering innovative structural solutions with excellence and integrity since 1983.</p>
+                    <p class="small text-white-50">Delivering innovative structural solutions with excellence and
+                        integrity since 1983.</p>
                 </div>
                 <div class="col-md-2 mb-4">
                     <h5>Quick Links</h5>
@@ -309,4 +512,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
