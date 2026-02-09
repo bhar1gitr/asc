@@ -354,3 +354,19 @@ body {
     background-color: var(--primary-orange);
     transform: translateY(-3px);
 }
+
+/* Default Mobile Size */
+.nav-logo {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+/* Desktop Size (Large screens) */
+@media (min-width: 992px) {
+    .nav-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
