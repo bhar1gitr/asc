@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life at ASC | Associated Consultants</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,9 +14,12 @@
     <style>
         :root {
             /* Extracted colors from your screenshots */
-            --brand-green: #294a40; /* Deep Green from header/footer */
-            --brand-orange: #f39c12; /* Orange from 'Associates' and buttons */
-            --light-bg: #f4f7f6;     /* Light grey background */
+            --brand-green: #294a40;
+            /* Deep Green from header/footer */
+            --brand-orange: #f39c12;
+            /* Orange from 'Associates' and buttons */
+            --light-bg: #f4f7f6;
+            /* Light grey background */
             --text-dark: #333333;
         }
 
@@ -37,10 +41,12 @@
             color: white;
             text-align: center;
         }
+
         .hero-title {
             font-weight: 700;
             margin-bottom: 1rem;
         }
+
         .section-subtitle {
             color: var(--brand-orange);
             font-weight: 700;
@@ -57,20 +63,24 @@
             padding: 40px 30px;
             /* The signature Orange Top Border */
             border-top: 5px solid var(--brand-orange);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
             height: 100%;
             text-align: center;
         }
+
         .custom-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
+
         .card-icon {
             font-size: 2.5rem;
-            color: var(--brand-green); /* Green icons to contrast with orange border */
+            color: var(--brand-green);
+            /* Green icons to contrast with orange border */
             margin-bottom: 20px;
         }
+
         .card-title {
             color: var(--brand-green);
             font-weight: 700;
@@ -82,10 +92,11 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
-            border-radius: 4px; /* Slightly sharper corners to match engineering vibe */
+            border-radius: 4px;
+            /* Slightly sharper corners to match engineering vibe */
             transition: opacity 0.3s;
         }
-        
+
         /* --- FOOTER (Matching Image 2) --- */
         footer {
             background-color: var(--brand-green);
@@ -93,32 +104,40 @@
             padding: 60px 0 30px 0;
             font-size: 0.9rem;
         }
+
         footer h5 {
             font-weight: 700;
             margin-bottom: 20px;
             font-size: 1.1rem;
         }
+
         footer ul li {
             margin-bottom: 10px;
         }
+
         footer a {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.2s;
         }
+
         footer a:hover {
             color: var(--brand-orange);
         }
+
         .btn-subscribe {
             background-color: var(--brand-orange);
             color: white;
             border: none;
             font-weight: 600;
         }
+
         .btn-subscribe:hover {
-            background-color: #d35400; /* Darker orange on hover */
+            background-color: #d35400;
+            /* Darker orange on hover */
             color: white;
         }
+
         .social-icon {
             font-size: 1.2rem;
             margin-right: 15px;
@@ -126,17 +145,16 @@
         }
     </style>
 </head>
+
 <body>
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(46, 79, 70, 0.95);">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(46, 79, 70, 0.95);">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#home">
                 <img class="nav-logo rounded-circle me-2" src="./images/logo.png" alt="ASC Associates">
-
                 <div class="d-flex flex-column justify-content-center">
                     <span class="fw-bold d-lg-none" style="font-size: 1.1rem; line-height: 1;">
                         ASC Associates
                     </span>
-
                     <span class="fw-bold d-none d-lg-block" style="font-size: 1.25rem;">
                         Associated Structural Engineers, LLP
                     </span>
@@ -149,17 +167,38 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="./clients.html">Clients</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutUs.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./lifeAtAsc.html">Life at ASC</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Who We Are
+                        </a>
+                        <ul class="dropdown-menu shadow border-0" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="./aboutUs.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="./management.html">Management</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="communityDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Community
+                        </a>
+                        <ul class="dropdown-menu shadow border-0" aria-labelledby="communityDropdown">
+                            <li><a class="dropdown-item" href="./architecht.html">Architects</a></li>
+                            <li><a class="dropdown-item" href="./lifeAtAsc.html">Life at ASC</a></li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    
+
     <header class="hero-section">
         <div class="container">
             <h1 class="display-4 hero-title">Life at ASC</h1>
@@ -174,8 +213,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <p class="text-muted">
-                        Associated Consultants (ASC) has been a leader in structural excellence since 1983. 
-                        But our strength isn't just in concrete and steel—it's in our people. 
+                        Associated Consultants (ASC) has been a leader in structural excellence since 1983.
+                        But our strength isn't just in concrete and steel—it's in our people.
                         We foster an environment where experience meets innovation.
                     </p>
                 </div>
@@ -190,21 +229,24 @@
                     <div class="custom-card">
                         <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                         <h4 class="card-title">Continuous Learning</h4>
-                        <p class="text-muted small">With 40+ years of legacy, we believe in passing knowledge down while embracing new technologies.</p>
+                        <p class="text-muted small">With 40+ years of legacy, we believe in passing knowledge down while
+                            embracing new technologies.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="custom-card">
                         <div class="card-icon"><i class="fa-solid fa-users-gear"></i></div>
                         <h4 class="card-title">Collaborative Growth</h4>
-                        <p class="text-muted small">Work alongside industry experts on residential, commercial, and industrial landmarks.</p>
+                        <p class="text-muted small">Work alongside industry experts on residential, commercial, and
+                            industrial landmarks.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="custom-card">
                         <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
                         <h4 class="card-title">Work-Life Balance</h4>
-                        <p class="text-muted small">We value the well-being of our team as much as the stability of our structures.</p>
+                        <p class="text-muted small">We value the well-being of our team as much as the stability of our
+                            structures.</p>
                     </div>
                 </div>
             </div>
@@ -215,16 +257,19 @@
         <div class="container py-4">
             <span class="section-subtitle text-center">Team Moments</span>
             <h2 class="text-center mb-5" style="color: var(--brand-green); font-weight: 700;">Inside ASC</h2>
-            
+
             <div class="row g-3">
                 <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team Meeting" class="gallery-img">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Team Meeting" class="gallery-img">
                 </div>
                 <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Engineering Plans" class="gallery-img">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Engineering Plans" class="gallery-img">
                 </div>
                 <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team Meeting" class="gallery-img">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Team Meeting" class="gallery-img">
                 </div>
             </div>
         </div>
@@ -235,7 +280,8 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <h5>ASC Associates</h5>
-                    <p class="small text-white-50">Leading structural consultancy firm started by Mr. Vikas Gokhale. Delivering innovative solutions with excellence and integrity since 1983.</p>
+                    <p class="small text-white-50">Leading structural consultancy firm started by Mr. Vikas Gokhale.
+                        Delivering innovative solutions with excellence and integrity since 1983.</p>
                     <div class="mt-3">
                         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -243,7 +289,7 @@
                         <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="col-md-2 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled small">
@@ -282,4 +328,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
