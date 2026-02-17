@@ -54,6 +54,30 @@
             color: white !important;
         }
 
+        .client-card:hover {
+            transform: translateY(-5px);
+            /* Nice little lift effect on hover */
+        }
+
+        .client-card img {
+            max-width: 100%;
+            max-height: 80px;
+            /* Limits logo height so name has room */
+            width: auto;
+            height: auto;
+            margin-bottom: 12px;
+            /* Space between logo and name */
+            object-fit: contain;
+        }
+
+        .client-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--brand-green);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         /* --- HERO SECTION --- */
         .hero-section {
             background: linear-gradient(rgba(41, 74, 64, 0.9), rgba(41, 74, 64, 0.8)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
@@ -171,10 +195,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./clients.html">Clients</a></li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -185,6 +205,9 @@
                             <li><a class="dropdown-item" href="./management.html">Management</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./clients.html">Clientele</a></li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="communityDropdown" role="button"
@@ -233,162 +256,202 @@
             <div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-5">
 
                 <div class="col">
-                    <div class="client-card shadow-sm"><img src="./images/architecht/1.png" alt="">
+                    <div class="client-card shadow-sm">
+                        <img src="./images/architecht/1.png" alt="">
+                        <div class="client-name">Ingenious Architects</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm">
                         <img style="background-color: #f39c12;" src="images/architecht/2.png" alt="">
+                        <div class="client-name">Studio C</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/3.png" alt="">
+                        <div class="client-name">Beyond Design</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/4.jpg" alt="">
+                        <div class="client-name">GA</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm">
                         <img style="background-color: var(--brand-green); padding: 0px 10px;"
                             src="images/architecht/5.jpg" alt="">
+                        <div class="client-name">R Design</div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/6.png" alt="">
+                        <div class="client-name">ThinkDrum</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/7.png" alt="">
+                        <div class="client-name">JD</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/8.png" alt="">
+                        <div class="client-name">Space Design</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/9.png" alt="">
+                        <div class="client-name">AVP</div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="client-card shadow-sm"><img src="images/architecht/10.png" alt="">
+                    <div class="client-card shadow-sm"><img style="background-color: #f39c12; padding: 10px 10px;"
+                            src="images/architecht/10.png" alt="">
+                        <div class="client-name">The Design Studio</div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="client-card shadow-sm">
                         <img src="images/architecht/11.jpg" width="100" alt="">
+                        <div class="client-name">AV</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/12.jpg" alt="">
+                        <div class="client-name">PMA</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/13.jpg" alt="">
+                        <div class="client-name">SBP</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/14.jpg" alt="">
+                        <div class="client-name">SSA Architects</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/15.png" alt="">
+                        <div class="client-name">ALFT</div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/16.png" alt="">
+                        <div class="client-name">Tatali & Partners LLP</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/17.png" alt="">
+                        <div class="client-name">Scapes</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/18.png" alt="">
+                        <div class="client-name">HSA</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/19.png" alt="">
+                        <div class="client-name">Nandapurkar & Associates</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/20.png" alt="">
+                        <div class="client-name">Hingoo Architects</div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/21.png" alt="">
+                        <div class="client-name">Design Consortium</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/22.png" alt="">
+                        <div class="client-name">Alpine</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/23.png" alt="">
+                        <div class="client-name">Sakar Architects</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/24.png" alt="">
+                        <div class="client-name">Home Work Designs</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/25.png" alt="">
+                        <div class="client-name">Beyond Design</div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/26.png" alt="">
+                        <div class="client-name">Deodhar Associates</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/27.png" alt="">
+                        <div class="client-name">A Cube</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/28.png" alt="">
+                        <div class="client-name">Associated Architects</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/29.png" alt="">
+                        <div class="client-name">Dimensions</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/30.png" alt="">
+                        <div class="client-name">Daisaria Associates</div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/31.png" alt="">
+                        <div class="client-name">Stapl</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/32.png" alt="">
+                        <div class="client-name">Architects Interiors Planners</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/33.png" alt="">
+                        <div class="client-name">Sanjay Puri Architects</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/34.png" alt="">
+                        <div class="client-name">Architect Hafeez Contractor</div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="client-card shadow-sm"><img src="images/architecht/35.png" alt="">
+                <div class="col-md-4">
+                    <div class="client-card shadow-sm">
+                        <img src="images/architecht/35.png" class="img-fluid" alt="Logo">
+                        <div class="client-name">I Stay</div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/36.png" alt="">
+                        <div class="client-name">Apices</div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="client-card shadow-sm"><img src="images/architecht/37.png" alt="">
+                        <div class="client-name">Apex</div>
                     </div>
                 </div>
             </div>
