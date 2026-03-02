@@ -435,7 +435,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <!-- <div class="col-lg-8">
                     <div class="bg-white p-4 rounded shadow">
                         <form>
                             <div class="row g-3">
@@ -449,6 +449,32 @@
                                     <textarea class="form-control" rows="5" placeholder="Your Message"
                                         required></textarea>
                                 </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary-custom w-100">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div> -->
+                <div class="col-lg-8">
+                    <div class="bg-white p-4 rounded shadow">
+                        <form action="https://formspree.io/f/info@asc.org.in" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" name="_replyto" class="form-control" placeholder="Your Email"
+                                        required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control" rows="5" placeholder="Your Message"
+                                        required></textarea>
+                                </div>
+
+                                <input type="hidden" name="_subject" value="New Website Inquiry">
+
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary-custom w-100">Send Message</button>
                                 </div>
